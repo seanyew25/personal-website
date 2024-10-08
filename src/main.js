@@ -8,7 +8,6 @@
 // createApp(App).mount("#app");
 
 import { createApp } from "vue";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 // Vuetify
 import "vuetify/styles";
