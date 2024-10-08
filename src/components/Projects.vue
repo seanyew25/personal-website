@@ -60,6 +60,14 @@ h1 {
 }
 
 .card-grid {
-  @apply grid grid-cols-1 md:grid-cols-2 gap-4 w-2/4 m-auto mt-8;
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:w-3/4 lg:w-1/2 m-auto mt-8;
+}
+
+a {
+  @apply no-underline text-black;
+}
+
+v-card-text {
+  @apply h-full;
 }
 </style>

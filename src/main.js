@@ -8,6 +8,7 @@
 // createApp(App).mount("#app");
 
 import { createApp } from "vue";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 // Vuetify
 import "vuetify/styles";
@@ -17,7 +18,6 @@ import * as directives from "vuetify/directives";
 
 // Components
 import App from "./App.vue";
-
 const vuetify = createVuetify({
   components,
   directives,
