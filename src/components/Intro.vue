@@ -13,7 +13,7 @@ window.addEventListener("load", function () {
   //     color: 0x7e43ab,
   //   });
   VANTA.WAVES({
-    el: "#test", // element selector string or DOM object reference
+    el: "#banner", // element selector string or DOM object reference
     color: 0x5588,
     waveHeight: 15,
     shininess: 30,
@@ -28,34 +28,49 @@ window.addEventListener("load", function () {
     src="/src/assets/bg.jpg"
     style="height: 50vh; align-items: center; position: relative"
   > -->
-  <div id="test" style="height: 500px; display: flex">
+  <div
+    id="banner"
+    style="
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      max-width: screen;
+    "
+  >
     <!-- <div class="overlay"></div> -->
-    <div>
-      <div class="outer">
-        <div class="h-fit text-white">
-          <h1>Hello I'm Sean Yew 👋</h1>
-        </div>
-        <!-- <div class="inner">
-          <img src="../assets/pfp.jpg" />
-        </div> -->
+    <!-- 
+    " -->
+
+    <div class="outer">
+      <div class="h-fit text-white">
+        <h1>Hello I'm Sean Yew 👋</h1>
+      </div>
+      <div class="inner">
+        <img src="../assets/pfp.jpg" />
       </div>
     </div>
   </div>
-  <Typewriter />
+  <div class="type-box">
+    <Typewriter />
+  </div>
+
   <!-- </v-parallax> -->
 </template>
 
 <style scoped>
+#banner {
+  @apply md:flex-row;
+}
 .outer {
-  @apply relative flex justify-start h-full items-center ml-5;
+  @apply relative flex justify-center items-center ml-5;
 }
 
 img {
-  @apply rounded-full h-[100px];
+  @apply rounded-full h-[200px];
 }
 
 .inner {
-  @apply h-full mx-4;
+  @apply mx-4;
 }
 
 h1 {
@@ -64,5 +79,9 @@ h1 {
 
 .overlay {
   @apply absolute top-0 h-full w-full z-0 bg-white opacity-50;
+}
+
+.type-box {
+  @apply flex justify-center items-center bg-[#3d5a80] text-white p-10;
 }
 </style>

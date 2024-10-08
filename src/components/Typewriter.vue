@@ -1,11 +1,6 @@
 <script setup>
 import { ref, reactive, onMounted } from "vue";
-const interests = ref([
-  "DevOps",
-  "Web Development",
-  "Backend Development",
-  "Data Engineering",
-]);
+const interests = ref(["DevOps", "Web Dev", "Backend Dev"]);
 const typeValue = ref("");
 const typeStatus = ref(false);
 const typingSpeed = 100;
@@ -57,14 +52,14 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="container">
-    <h1>
-      I'm interested in
-      <span class="typed-text font-rubik">{{ typeValue }}</span>
-      <span class="blinking-cursor">|</span>
-      <span class="cursor" :class="{ typing: typeStatus.value }">&nbsp;</span>
-    </h1>
-  </div>
+  <!-- <div class="bg-coral-500"> -->
+  <h1>
+    I'm interested in
+    <span class="typed-text font-rubik">{{ typeValue }}</span>
+    <span class="blinking-cursor">|</span>
+    <span class="cursor" :class="{ typing: typeStatus.value }">&nbsp;</span>
+  </h1>
+  <!-- </div> -->
 </template>
 
 <style lang="scss" scoped>
@@ -72,6 +67,7 @@ onMounted(() => {
   width: 50%;
   height: 20vh;
   display: flex;
+  max-width: fit-content;
   justify-content: center;
   align-items: center;
   margin: auto;
@@ -79,18 +75,18 @@ onMounted(() => {
   z-index: 1;
 }
 h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Rubik", sans-serif;
   font-weight: normal;
   span.typed-text {
-    color: darkblue;
+    color: #98c1d9;
   }
 }
 
 // Cursor blinking CSS Starts...
 .blinking-cursor {
-  font-size: 2rem;
-  color: #2c3e50;
+  font-size: 1.5rem;
+  color: white;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
   -ms-animation: 1s blink step-end infinite;
@@ -103,7 +99,7 @@ h1 {
     color: transparent;
   }
   50% {
-    color: #2c3e50;
+    color: white;
   }
 }
 @-moz-keyframes blink {
@@ -112,7 +108,7 @@ h1 {
     color: transparent;
   }
   50% {
-    color: #2c3e50;
+    color: white;
   }
 }
 @-webkit-keyframes blink {
@@ -121,7 +117,7 @@ h1 {
     color: transparent;
   }
   50% {
-    color: #2c3e50;
+    color: white;
   }
 }
 @-ms-keyframes blink {
@@ -130,7 +126,7 @@ h1 {
     color: transparent;
   }
   50% {
-    color: #2c3e50;
+    color: white;
   }
 }
 @-o-keyframes blink {
@@ -139,7 +135,7 @@ h1 {
     color: transparent;
   }
   50% {
-    color: #2c3e50;
+    color: white;
   }
 }
 // Cursor blinking CSS Ends...
