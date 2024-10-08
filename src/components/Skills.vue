@@ -7,9 +7,9 @@ window.addEventListener("load", function () {
     mouseControls: true,
     touchControls: true,
     gyroControls: false,
-    minHeight: 200.0,
+    minHeight: 320.0,
     minWidth: 200.0,
-    scale: 1.0,
+    scale: 2.0,
     scaleMobile: 1.0,
     color: 0x6cb5ca,
     backgroundColor: 0x1c2a8d,
@@ -49,7 +49,6 @@ onMounted(() => {
 
 <template>
   <div id="skillBanner">
-    <div class="overlay"></div>
     <div class="skillHeading">
       <h1 class="text-white">Skills</h1>
     </div>
@@ -114,9 +113,6 @@ onMounted(() => {
   @apply flex justify-center;
 }
 .skillHeading {
-  @apply flex justify-center items-center;
-}
-.overlay {
-  @apply absolute top-0 h-full w-full z-0 bg-white opacity-50;
+  @apply flex justify-center items-center pt-10;
 }
 </style>
